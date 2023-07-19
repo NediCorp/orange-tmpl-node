@@ -30,13 +30,13 @@ jobs:
       matrix:
         config:
           - environment: 'dev'
-            ref: 'blue'
+            ref: 'orange'
             dry_run: 'false'
           - environment: 'qa'
-            ref: 'blue'
+            ref: 'orange'
             dry_run: 'false'
           - environment: 'prod'
-            ref: 'blue'
+            ref: 'orange'
             dry_run: 'false'
     steps:
       - name: Trigger secrets-sync-back workflow
