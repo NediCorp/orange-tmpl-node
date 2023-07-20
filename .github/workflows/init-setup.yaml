@@ -10,7 +10,7 @@ on:
 
 jobs:
   trigger_env:
-   uses: Blue-Express/blue-sbx-templates/.github/workflows/sync-env-repo.yaml@orange
+   uses: Blue-Express/blue-sbx-templates/.github/workflows/sync-env-repo.yaml@blue
    secrets:
      API_TOKEN_GITHUB: inherit
 
