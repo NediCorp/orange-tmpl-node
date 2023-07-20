@@ -10,7 +10,7 @@ on:
 
 jobs:
   trigger_env:
-   uses: NediCorp/sbx-templates/.github/workflows/sync-env-repo.yaml@orange
+   uses: Blue-Express/blue-sbx-templates/.github/workflows/sync-env-repo.yaml@orange
    secrets:
      API_TOKEN_GITHUB: inherit
 
@@ -25,18 +25,18 @@ jobs:
     runs-on: ubuntu-latest
     needs: wait
     env:
-      TARGET_REPO: 'sbx-templates'
+      TARGET_REPO: 'blue-sbx-templates'
     strategy:
       matrix:
         config:
           - environment: 'dev'
-            ref: 'orange'
+            ref: 'blue'
             dry_run: 'false'
           - environment: 'qa'
-            ref: 'orange'
+            ref: 'blue'
             dry_run: 'false'
           - environment: 'prod'
-            ref: 'orange'
+            ref: 'blue'
             dry_run: 'false'
     steps:
       - name: Trigger secrets-sync-back workflow
