@@ -10,7 +10,7 @@ on:
 
 jobs:
   trigger_env:
-   uses: NediCorp/orange-templates/.github/workflows/sync-env-repo.yaml@blue
+   uses: NediCorp/orange-templates/.github/workflows/sync-env-repo.yaml@orange
    secrets:
      API_TOKEN_GITHUB: inherit
 
@@ -30,13 +30,13 @@ jobs:
       matrix:
         config:
           - environment: 'dev'
-            ref: 'dev'
+            ref: 'orange'
             dry_run: 'false'
           - environment: 'qa'
-            ref: 'dev'
+            ref: 'orange'
             dry_run: 'false'
           - environment: 'prod'
-            ref: 'dev'
+            ref: 'orange'
             dry_run: 'false'
     steps:
       - name: Trigger secrets-sync-back workflow
