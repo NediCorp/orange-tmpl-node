@@ -5,7 +5,7 @@ name: create-env-repo
 
 on:
   push:
-    branches: ['*']
+    branches: ['dev']
   workflow_dispatch:
 
 jobs:
